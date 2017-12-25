@@ -1,20 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+    <h1>Session-6, Assignment-3</h1>
+    <br>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12 form-group">
+            <!-- Binding value from component to text box values using two-way binding -->
 
+            <!-- Two local template variables are created each for first name & last name -->
+              <input type="text" placeholder="First Name" class="form-control" [(ngModel)]="firstName" #fname>
+              <br><br>
+              <input type="text" placeholder="Last Name" class="form-control" [(ngModel)]="lastName" #lname>
+              <br><br>
+              <!-- This button calls the component method on click. Method is bound using event binding. -->
+              <!-- The event method takes first name & last name values from text boxes using local template variables -->
+              <button class="btn btn-block" (click)="assignToTitle(fname.value,lname.value)">Show Title</button>
+              <br><br>
+          </div>
+
+          <!-- Title is displayed using interpolation -->
+          <h3>{{title}}</h3>
+          
+      </div>
+      </div>
+</div>
